@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itens de Formulário - AvD</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Descrição</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% itens.forEach(function(Item) { %>
+            <tr>
+                <td><%= Item.attributes.ItemID %></td>
+                <td><%= Item.attributes.Nome %></td>
+                <td><a href="http://localhost:3000<%= Item.links.self %>">Excluir</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
